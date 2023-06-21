@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Search suite">
+    <test name="search books test">
+        <classes>
+            <class name="SearchTest"/>
+        </classes>
+    </test>
+</suite>
