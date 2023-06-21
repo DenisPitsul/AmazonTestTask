@@ -23,14 +23,6 @@ public class SearchTest extends BaseTestRunnerUI {
                 .searchItemWithCategory(CATEGORY, SEARCH_TEXT)
                 .getBookList();
 
-        boolean isBookFound = false;
-        for (Book bookItem: bookList) {
-            if (bookItem.getName().equals(book.getName())) {
-                isBookFound = true;
-                break;
-            }
-        }
-
-        Assert.assertTrue(isBookFound, book.getName() + " was not found on search results page.");
+        Assert.assertTrue(bookList.contains(book), book.getName() + " was not found on search results page.");
     }
 }

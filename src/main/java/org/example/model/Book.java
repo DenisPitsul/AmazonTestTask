@@ -1,6 +1,7 @@
 package org.example.model;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Book {
     private boolean isBestSeller;
@@ -61,5 +62,18 @@ public class Book {
                 ", author='" + author + '\'' +
                 ", prices=" + prices +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return isBestSeller == book.isBestSeller && name.equals(book.name) && author.equals(book.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(isBestSeller, name, author);
     }
 }
