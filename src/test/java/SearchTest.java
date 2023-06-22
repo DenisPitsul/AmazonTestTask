@@ -13,7 +13,7 @@ public class SearchTest extends BaseTestRunnerUI {
 
     @Test
     public void searchBooksTest() {
-        driver.get("https://www.amazon.com/Head-First-Java-Kathy-Sierra/dp/0596009208/ref=sr_1_2?dchild=1&keywords=Java&qid=1610356790&s=books&sr=1-2");
+        driver.get("https://www.amazon.com/Head-First-Java-Brain-Friendly-Guide/dp/1491910771/ref=sr_1_1?crid=EQ34NL3OAO7Y&keywords=Java&qid=1687419850&s=books&sprefix=jav%2Cstripbooks-intl-ship%2C604&sr=1-1");
         Book book = new ProductDetailPage(driver)
                 .getBook();
 
